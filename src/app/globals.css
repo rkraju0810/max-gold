@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold;
+    font-family: Teachers;
+  }
+
+  h2 {
+    @apply text-2xl;
+    font-family: Teachers;
+  }
+
+  h3 {
+    @apply font-medium;
+    font-family: Teachers;
+  }
+
+  p {
+    @apply text-base;
+    font-family: Teachers;
+  }
+}
